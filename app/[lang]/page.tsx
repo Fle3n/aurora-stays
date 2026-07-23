@@ -1,2 +1,3 @@
 import { SiteHome } from "../_components/Home";
-export default async function Page({params}:{params:Promise<{lang:string}>}){const {lang}=await params;return <SiteHome lang={lang==="ru"?"ru":"en"}/>}
+import { DocumentLanguage } from "../_components/DocumentLanguage";
+export default async function Page({params}:{params:Promise<{lang:string}>}){const {lang}=await params;const locale=lang==="ru"?"ru":"en";return <><DocumentLanguage lang={locale}/><SiteHome lang={locale}/></>}

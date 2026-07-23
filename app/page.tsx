@@ -1,2 +1,3 @@
 import { SiteHome } from "./_components/Home";
-export default function Page(){return <SiteHome lang="en"/>}
+import { DocumentLanguage } from "./_components/DocumentLanguage";
+export default function Page(){return <><DocumentLanguage lang="en"/><SiteHome lang="en"/></>}

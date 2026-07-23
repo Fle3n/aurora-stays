@@ -1,2 +1,3 @@
 import { DetailPage } from "../../_components/Localized";
-export default async function Page({params}:{params:Promise<{lang:string;slug:string}>}){const {lang,slug}=await params;return <DetailPage lang={lang==="ru"?"ru":"en"} slug={slug}/>}
+import { DocumentLanguage } from "../../_components/DocumentLanguage";
+export default async function Page({params}:{params:Promise<{lang:string;slug:string}>}){const {lang,slug}=await params;const locale=lang==="ru"?"ru":"en";return <><DocumentLanguage lang={locale}/><DetailPage lang={locale} slug={slug}/></>}
