@@ -6,11 +6,11 @@ const cabins = [
 
 export default function Home() {
   return (
-    <main>
+    <main><div className="lang-float"><a className="active" href="/">EN</a><a href="/ru">RU</a></div>
       <section className="hero" id="top">
         <nav>
           <a className="brand" href="#top"><span>▲</span> AURORA</a>
-          <div className="navlinks"><a href="#stays">Stays</a><a href="#story">Story</a></div>
+          <div className="navlinks"><a href="/en/stays">Stays</a><a href="/en/journal">Journal</a></div>
           <a className="book" href="#book">Book your stay ↗</a>
         </nav>
         <div className="eyebrow">68° NORTH · NORWAY</div>
